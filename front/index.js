@@ -18,22 +18,22 @@ const checkBounds = (currentPos, downKey) => {
   let topBound = 10
 
   if (currentPos.top <= topBound) {
-    player.style.top = topBound
+    player.style.top = topBound + 'px'
     if (downKey == 'w') {
       return 0
     } else return speed
   } else if (currentPos.left <= leftBound) {
-    player.style.left = leftBound
+    player.style.left = leftBound + 'px'
     if (downKey == 'a') {
       return 0
     } else return speed
-  } else if (currentPos.top >= bottomBound) {
-    player.style.top = bottomBound
+  } else if (currentPos.top > bottomBound) {
+    player.style.top = bottomBound + 'px'
     if (downKey == 's') {
       return 0
     } else return speed
-  } else if (currentPos.left >= rightBound) {
-    player.style.left = rightBound
+  } else if (currentPos.left > rightBound) {
+    player.style.left = rightBound + 'px'
     if (downKey == 'd') {
       return 0
     } else return speed
@@ -43,6 +43,7 @@ const checkBounds = (currentPos, downKey) => {
 const handleMove = (e) => {
   currentPos = {top: parseInt(player.style.top), left: parseInt(player.style.left)}
 
+  // WASD
   switch (e.key) {
     case 'w':
       player.style.top = currentPos.top - checkBounds(currentPos, e.key) + 'px'
@@ -56,7 +57,13 @@ const handleMove = (e) => {
     case 'd':
       player.style.left = currentPos.left + checkBounds(currentPos, e.key) + 'px'
       break;
+
+    // MISC
+    case 'Shift':
+      
+      break;
     default:
+      console.log(e.key)
       break;
   }
 }
