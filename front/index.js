@@ -1,22 +1,19 @@
 let canvas = document.querySelector('#main-canvas')
 let game = document.querySelector('#canvas-wrapper')
+let player = document.querySelector('#player')
+let speed = 10
+
+let bottomBound = document.querySelector('#main-canvas').clientHeight
+let rightBound = document.querySelector('#main-canvas').clientWidth
+let leftBound = 10
+let topBound = 10
 
 let fsButton = document.querySelector('#full-screen')
 fsButton.addEventListener('click', () => {
   game.requestFullscreen()
 })
 
-
-let player = document.querySelector('#player')
-let speed = 10
-
 const checkBounds = (currentPos, downKey) => {
-  // switch to query canvas size
-  let bottomBound = document.querySelector('#main-canvas').clientHeight
-  let rightBound = document.querySelector('#main-canvas').clientWidth
-  let leftBound = 10
-  let topBound = 10
-
   if (currentPos.top <= topBound) {
     player.style.top = topBound + 'px'
     if (downKey == 'w') {
@@ -42,7 +39,6 @@ const checkBounds = (currentPos, downKey) => {
 
 const handleMove = (e) => {
   currentPos = {top: parseInt(player.style.top), left: parseInt(player.style.left)}
-
   // WASD
   switch (e.key) {
     case 'w':
@@ -57,10 +53,9 @@ const handleMove = (e) => {
     case 'd':
       player.style.left = currentPos.left + checkBounds(currentPos, e.key) + 'px'
       break;
-
     // MISC
     case 'Shift':
-      
+
       break;
     default:
       console.log(e.key)
