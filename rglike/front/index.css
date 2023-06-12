@@ -1,0 +1,32 @@
+:root {
+  --cvs-size: 1000px;
+  --plr-size: 35px;
+}
+
+body {
+  background-color: black;
+}
+
+#canvas-wrapper {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  width: 98vw;
+}
+
+#player {
+  position: absolute;
+  background-color: blue;
+  height: var(--plr-size);
+  width: var(--plr-size);
+  transition: 0.1s linear;
+}
+
+#main-canvas {
+  position: static;
+  background-color: gray;
+  height: 98vh;
+  width: 98vw;
+}
