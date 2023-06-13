@@ -56,9 +56,13 @@ const handleMove = (e) => {
     case 'd':
       player.style.left = currentPos.left + checkBounds(currentPos, e.key) + 'px'
       break;
+    case 'Shift':
+      console.log(player.className)
+      player.className = 'animate jump'
+      setTimeout(() => player.className = '', 450);
     default:
       break;
-  }
+    }
 }
 
 window.addEventListener('keydown', e => handleMove(e))
