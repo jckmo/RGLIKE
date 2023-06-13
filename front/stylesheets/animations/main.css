@@ -1,0 +1,66 @@
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-15px)
+  }
+
+  65% {
+    transform: translateY(-15px)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate--infinite {
+  animation-iteration-count: infinite;
+}
+
+.animate--delay-1s {
+  animation-delay: 1s;
+}
+
+.animate--fast {
+  animation-duration: .5s;
+}
+
+.animate--slow {
+  animation-duration: 3s;
+}
+
+.jump {
+
+  /*  */
+  /*/* selects keyframe */
+    /* animation-name: jump; */
+  /*/* sets time to complete once */
+    /* animation-duration: 2s; */
+  /*/* acc curve */
+    /* animation-timing-function: ease-in; */
+  /*/* delay before */
+    /* animation-delay: 0s; */
+  /*/* how many times */
+    /* animation-iteration-count: 1; */
+  /*/* run normally or in reverse */
+    /* animation-direction: normal; */
+  /*/* how to apply styles before and after */
+    /* animation-fill-mode: forward; */
+  /*  */
+
+  animation-name: jump;
+  animation-timing-function: ease-in-out;
+  /* animation: land 1s ease-in-out 1s 1 normal both; */
+}
