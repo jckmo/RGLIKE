@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: white;
 }
 
 #full-screen {
@@ -43,30 +43,36 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 98vh;
-  width: 98vw;
+  /* height: 98vh;
+  width: 98vw; */
 }
 
-#player {
+/* #player {
   position: absolute;
   background-color: blue;
   height: var(--plr-size);
   width: var(--plr-size);
   transition: 0.1s linear;
-  background-image: url(../assets/duck-pc.png);
-  background-size: contain;
+  /* background-image: url(../assets/duck-pc.png); */
+  /* background-size: contain;
   border-radius: 50%;
-  margin: 5%;
-}
-
+  margin: 5%; */
+  
 .land {
   animation-name: jump;
   animation-timing-function: ease-in-out;
 }
 
-#main-canvas {
+#player-canvas {
   position: static;
-  background-color: black;
+  background-color: gray;
+
+  height: 25px;
+  width: 25px;
+}
+
+#level {
   height: 98vh;
   width: 98vw;
+  background-color: aquamarine;
 }
