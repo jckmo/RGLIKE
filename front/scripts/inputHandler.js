@@ -37,7 +37,7 @@ const handleDown = (e) => {
         vyu = -2
       break;
     case 'a':
-        vxr = -2
+        vxl = -2
       break;
     case 's':
         vyd = 2

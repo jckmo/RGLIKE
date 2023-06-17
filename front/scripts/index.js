@@ -21,10 +21,10 @@ function update() {
   y += vyd
   
 
-  img.onload = () => {
-    const pattern = ctx.createPattern(img, 'no-repeat') 
-    ctx.fillStyle = pattern
-  }
+  // img.onload = () => {
+  //   const pattern = ctx.createPattern(img, 'no-repeat') 
+  //   ctx.fillStyle = pattern
+  // }
   ctx.fillRect(x, y, 25, 25)
   requestAnimationFrame(update)
 }
