@@ -15,19 +15,19 @@ body {
   background-color: lightcoral;
   border: 10px solid seashell;
   border-radius: 5px;
-
+  
   /*/* which prop effect is applied to */
   /* transition-property: transform; */
-
+  
   /*/* how long ot complete */
   /* transition-duration: 0.3s; */
-
+  
   /*/* acc curve for trans */
   /* transition-timing-function: ease; */
-
+  
   /*/* delay before effect */
   /* transition-delay: 0s; */
-
+  
   /* transition: transform 0.3s, background-color 0.3s, color 0.3s; */
   transition: all 0.3s;
 }
@@ -52,14 +52,14 @@ body {
   height: var(--plr-size);
   width: var(--plr-size);
   transition: 0.1s linear;
-  background-image: url(../assets/duck-pixel-3.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-image: url(../assets/pc/duck-pc-f1.png);
 }
 
 .left-face {
   transform: scaleX(-1);
-
+  
 }
 
 .right-face {
@@ -84,4 +84,5 @@ body {
   background-color: black;
   height: 98vh;
   width: 98vw;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }

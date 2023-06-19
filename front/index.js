@@ -42,6 +42,7 @@ const checkBounds = (currentPos, downKey) => {
 
 const handleMove = (e) => {
   currentPos = { top: parseInt(player.style.top), left: parseInt(player.style.left) }
+  // return to frame 1 on key up
 
   switch (e.key) {
     case 'w':
