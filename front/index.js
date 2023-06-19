@@ -48,12 +48,14 @@ const handleMove = (e) => {
       player.style.top = currentPos.top - checkBounds(currentPos, e.key) + 'px'
       break;
     case 'a':
+      player.className = 'left-face'
       player.style.left = currentPos.left - checkBounds(currentPos, e.key) + 'px'
       break;
     case 's':
       player.style.top = currentPos.top + checkBounds(currentPos, e.key) + 'px'
       break;
     case 'd':
+      player.className = 'right-face'
       player.style.left = currentPos.left + checkBounds(currentPos, e.key) + 'px'
       break;
     case 'Shift':

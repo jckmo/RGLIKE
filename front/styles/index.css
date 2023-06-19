@@ -57,6 +57,23 @@ body {
   background-repeat: no-repeat;
 }
 
+.left-face {
+  transform: scaleX(-1);
+
+}
+
+.right-face {
+  transform: scaleX(1);
+}
+
+.up-face {
+  transform: scaleY(1);
+}
+
+.down-face {
+  transform: scaleY(-1);
+}
+
 .land {
   animation-name: jump;
   animation-timing-function: ease-in-out;
