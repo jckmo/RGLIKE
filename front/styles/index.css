@@ -51,7 +51,9 @@ body {
   position: absolute;
   height: var(--plr-size);
   width: var(--plr-size);
-  transition: 0.1s linear;
+  transition-property: all;
+  transition-duration: .1s;
+  transition-timing-function: ease-out;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(../assets/pc/duck-pc-f1.png);

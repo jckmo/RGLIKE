@@ -40,23 +40,27 @@ const checkBounds = (currentPos, downKey) => {
   } else return speed
 }
 
-const handleMove = (e) => {
+const handleDown = (e) => {
   currentPos = { top: parseInt(player.style.top), left: parseInt(player.style.left) }
   // return to frame 1 on key up
 
   switch (e.key) {
     case 'w':
+      player.className = 'moving animate animate--infinite '
       player.style.top = currentPos.top - checkBounds(currentPos, e.key) + 'px'
       break;
     case 'a':
-      player.className = 'left-face'
+      player.className = 'moving animate animate--infinite '
+      player.className = player.className + 'left-face'
       player.style.left = currentPos.left - checkBounds(currentPos, e.key) + 'px'
       break;
     case 's':
+      player.className = 'moving animate animate--infinite '
       player.style.top = currentPos.top + checkBounds(currentPos, e.key) + 'px'
       break;
     case 'd':
-      player.className = 'right-face'
+      player.className = 'moving animate animate--infinite '
+      player.className = player.className + 'right-face'
       player.style.left = currentPos.left + checkBounds(currentPos, e.key) + 'px'
       break;
     case 'Shift':
@@ -68,4 +72,33 @@ const handleMove = (e) => {
   }
 }
 
-window.addEventListener('keydown', e => handleMove(e))
+const handleUp = (e) => {
+
+  switch (e.key) {
+    case 'w':
+      setTimeout(() => {
+        (player.className = '')
+      }, 2700);
+      break;
+    case 'a':
+      setTimeout(() => {
+        (player.className = 'left-face')
+      }, 2700);
+      break;
+      case 's':
+      setTimeout(() => {
+        (player.className = '')
+      }, 2700);
+      break;
+    case 'd':
+      setTimeout(() => {
+        (player.className = '')
+      }, 2700);
+      break;
+    default:
+      break;
+  }
+}
+
+window.addEventListener('keydown', e => handleDown(e))
+window.addEventListener('keyup', e => handleUp(e))

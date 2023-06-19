@@ -29,6 +29,15 @@
   }
 }
 
+@keyframes moving {
+  49% {
+    background-image: url('../assets/pc/duck-pc-f1-2.png');
+  }
+  99% {
+    background-image: url('../assets/pc/duck-pc-f1.png');
+  }
+}
+
 .animate {
   animation-duration: .5s;
   animation-fill-mode: both;
@@ -72,4 +81,9 @@
   animation-name: jump;
   animation-timing-function: ease-in-out;
   /* animation: land 1s ease-in-out 1s 1 normal both; */
+}
+
+.moving {
+  animation-name: moving;
+  animation-timing-function: ease-in-out;
 }
