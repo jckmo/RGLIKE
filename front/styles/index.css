@@ -49,14 +49,12 @@ body {
 
 #player {
   position: absolute;
-  background-color: blue;
   height: var(--plr-size);
   width: var(--plr-size);
   transition: 0.1s linear;
-  background-image: url(../assets/duck-pc.png);
+  background-image: url(../assets/duck-pixel-3.png);
   background-size: contain;
-  border-radius: 50%;
-  margin: 5%;
+  background-repeat: no-repeat;
 }
 
 .land {
