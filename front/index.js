@@ -8,7 +8,7 @@ fsButton.addEventListener('click', () => {
 
 
 let player = document.querySelector('#player')
-let speed = 10
+let speed = 3
 
 const checkBounds = (currentPos, downKey) => {
   // switch to query canvas size
@@ -78,22 +78,22 @@ const handleUp = (e) => {
     case 'w':
       setTimeout(() => {
         (player.className = '')
-      }, 2700);
+      }, 800);
       break;
     case 'a':
       setTimeout(() => {
         (player.className = 'left-face')
-      }, 2700);
+      }, 800);
       break;
       case 's':
       setTimeout(() => {
         (player.className = '')
-      }, 2700);
+      }, 800);
       break;
     case 'd':
       setTimeout(() => {
         (player.className = '')
-      }, 2700);
+      }, 800);
       break;
     default:
       break;
