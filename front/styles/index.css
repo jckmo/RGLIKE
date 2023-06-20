@@ -1,6 +1,8 @@
 :root {
   --cvs-size: 1000px;
   --plr-size: 35px;
+  --cvs-ht: 80vh;
+  --cvs-wt: 60vw;
 }
 
 body {
@@ -43,8 +45,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 98vh;
-  width: 98vw;
+  height: var(--cvs-ht);
+  width: var(--cvs-wt);
 }
 
 #player {
@@ -84,7 +86,7 @@ body {
 #main-canvas {
   position: static;
   background-color: black;
-  height: 98vh;
-  width: 98vw;
+  height: var(--cvs-ht);
+  width: var(--cvs-wt);
   background: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }

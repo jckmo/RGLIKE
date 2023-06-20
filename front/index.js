@@ -76,24 +76,16 @@ const handleUp = (e) => {
 
   switch (e.key) {
     case 'w':
-      setTimeout(() => {
         (player.className = '')
-      }, 800);
       break;
     case 'a':
-      setTimeout(() => {
         (player.className = 'left-face')
-      }, 800);
       break;
       case 's':
-      setTimeout(() => {
         (player.className = '')
-      }, 800);
       break;
     case 'd':
-      setTimeout(() => {
         (player.className = '')
-      }, 800);
       break;
     default:
       break;
